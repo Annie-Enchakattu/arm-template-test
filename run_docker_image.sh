@@ -5,4 +5,5 @@
 
 #sudo docker build . -t simple-docker-test:1
 #sudo docker run "simple-docker-test:1"
+sleep 2m
 echo hello
