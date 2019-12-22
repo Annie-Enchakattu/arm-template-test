@@ -195,7 +195,7 @@
              "fileUris": [
                  "https://raw.githubusercontent.com/Annie-Enchakattu/arm-template-test/feature/arm/run_docker_image.sh"
              ],
-             "commandToExecute": "[concat('bash run_docker_image.sh ',  parameters('resourceGroupName'), ' ', parameters('vmName') ,' & disown')]"
+             "commandToExecute": "[concat(' nohup bash run_docker_image.sh ',  parameters('resourceGroupName'), ' ', parameters('vmName') ,' & disown')]"
          }
      }
     }
