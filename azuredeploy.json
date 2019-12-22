@@ -55,6 +55,7 @@
     "variables": {
         "resourceGroupName": "[resourceGroup().name]",
         "vNetName": "[concat(parameters('vmName'), '-vnet')]",
+        "linkedTemplateRoot": "https://raw.githubusercontent.com/Annie-Enchakattu/arm-template-test/feature/arm/nested_templates/",
         "vNetAddressPrefixes": "10.0.0.0/16",
         "vNetSubnetName": "default",
         "vNetSubnetAddressPrefix": "10.0.0.0/24",
@@ -63,9 +64,9 @@
         "networkInterfaceName": "[concat(parameters('vmName'), '-nic')]",
         "networkSecurityGroupName": "[concat(parameters('vmName'), '-nsg')]",
         "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('vNetName'), variables('vNetSubnetName'))]",
-        "createVMUrl": "https://raw.githubusercontent.com/microsoft/landcover/feature/vm-arm-template/ARM/nested_templates/createVM.json",
-        "createRBACUrl": "https://raw.githubusercontent.com/microsoft/landcover/feature/vm-arm-template/ARM/nested_templates/setupVMIdentityRole.json",
-        "updateVMUrl": "https://raw.githubusercontent.com/microsoft/landcover/feature/vm-arm-template/ARM/nested_templates/updateVM.json",
+        "createVMUrl": "[concat(variables('linkedTemplateRoot'), 'createVM.json')]",
+        "createRBACUrl": "[concat(variables('linkedTemplateRoot'), 'setupVMIdentityRole.json')]",
+        "updateVMUrl": "[concat(variables('linkedTemplateRoot'), 'updateVM.json')]",
         "linuxConfiguration": {
             "disablePasswordAuthentication": true,
             "ssh": {
