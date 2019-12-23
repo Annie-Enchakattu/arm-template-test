@@ -6,7 +6,8 @@
             "type": "String",
             "metadata": {
                 "description": "Specifies a name for generating resource names."
-            }
+            },
+            "defaultValue": "lcm"
         },
         "vmSize": {
             "allowedValues": [
@@ -19,7 +20,8 @@
             "type": "String",
             "metadata": {
                 "description": "Size of vm"
-            }
+            },
+            "defaultValue": "Standard_B1ms"
         },
         "location": {
             "defaultValue": "[resourceGroup().location]",
@@ -35,7 +37,7 @@
             }
         },
         "authenticationType": {
-            "defaultValue": "sshPublicKey",
+            "defaultValue": "password",
             "allowedValues": [
                 "sshPublicKey",
                 "password"
