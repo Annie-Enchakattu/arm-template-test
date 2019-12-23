@@ -3,7 +3,6 @@
 git clone https://github.com/microsoft/landcover.git
 cd landcover
 git checkout feature/vm-arm-template
-cd landcover
 cd ARM/simple_docker_test
 
 cat << EOF > app/az_config.py
