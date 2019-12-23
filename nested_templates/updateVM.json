@@ -193,7 +193,7 @@
          "autoUpgradeMinorVersion": true,
          "settings": {
              "fileUris": [
-                 "https://raw.githubusercontent.com/Annie-Enchakattu/arm-template-test/feature/arm/run_docker_image.sh"
+                 "https://raw.githubusercontent.com/Annie-Enchakattu/arm-template-test/feature/arm/build_run_docker_image.sh"
              ],
           "commandToExecute": "[concat('tmux new -d -s runcode  \"bash --init-file build_run_docker_image.sh\" ',  parameters('resourceGroupName'), ' ', parameters('vmName'))]"
          }
