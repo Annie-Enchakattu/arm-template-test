@@ -195,7 +195,7 @@
             "fileUris": [
                 "https://raw.githubusercontent.com/Annie-Enchakattu/arm-template-test/feature/arm/build_run_docker_image.sh"
             ],
-            "commandToExecute": "[concat('tmux new -d -s runcode; tmux send -t runcode.0 \"bash bashtest.sh',  parameters('resourceGroupName'), ' ',  parameters('vmName'), '\" ENTER')]"
+            "commandToExecute": "[concat('tmux new -d -s runcode; tmux send -t runcode.0 \"bash build_run_docker_image.sh',  parameters('resourceGroupName'), ' ',  parameters('vmName'), '\" ENTER')]"
         }
     }
    }
